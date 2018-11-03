@@ -859,25 +859,6 @@ public class PlayFabServerModels {
         
     }
 
-    /** @deprecated Do not use */
-    @Deprecated
-    public static class DeleteUsersRequest {
-        /** An array of unique PlayFab assigned ID of the user on whom the operation will be performed. */
-        public ArrayList<String> PlayFabIds;
-        /**
-         * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
-         * title has been selected.
-         */
-        public String TitleId;
-        
-    }
-
-    /** @deprecated Do not use */
-    @Deprecated
-    public static class DeleteUsersResult {
-        
-    }
-
     public static class DeregisterGameRequest {
         /** Unique identifier for the Game Server Instance that is being deregistered. */
         public String LobbyId;
@@ -1421,6 +1402,11 @@ public class PlayFabServerModels {
         FacebookInstantGamesIdNotLinked,
         InvalidFacebookInstantGamesSignature,
         FacebookInstantGamesAuthNotConfiguredForTitle,
+        EntityProfileConstraintValidationFailed,
+        PlayInsightsIngestionKeyPending,
+        PlayInsightsIngestionKeyNotFound,
+        StatisticTagRequired,
+        StatisticTagInvalid,
         MatchmakingEntityInvalid,
         MatchmakingPlayerAttributesInvalid,
         MatchmakingCreateRequestMissing,
@@ -1455,7 +1441,9 @@ public class PlayFabServerModels {
         MatchmakingMemberProfileInvalid,
         WriteAttemptedDuringExport,
         NintendoSwitchDeviceIdNotLinked,
-        MatchmakingNotEnabled
+        MatchmakingNotEnabled,
+        MatchmakingGetStatisticsIdentityInvalid,
+        MatchmakingStatisticsIdMissing
     }
 
     public static class GetAllSegmentsRequest {
@@ -2837,12 +2825,6 @@ public class PlayFabServerModels {
          * region and use Tags (below) to specify your custom region.
          */
         public Region Region;
-        /**
-         * IPV4 address of the Game Server Instance.
-         * @deprecated Please use ServerIPV4Address instead.
-         */
-        @Deprecated
-        public String ServerHost;
         /** IPV4 address of the game server instance. */
         public String ServerIPV4Address;
         /** IPV6 address (if any) of the game server instance. */
