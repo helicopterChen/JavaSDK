@@ -1044,12 +1044,6 @@ public class PlayFabClientModels {
         public Region Region;
         /** duration in seconds this server has been running */
         public Long RunTime;
-        /**
-         * IPV4 address of the server
-         * @deprecated Please use ServerIPV4Address instead.
-         */
-        @Deprecated
-        public String ServerHostname;
         /** IPV4 address of the server */
         public String ServerIPV4Address;
         /** IPV6 address of the server */
@@ -2701,12 +2695,6 @@ public class PlayFabClientModels {
         public String LobbyID;
         /** time in milliseconds the application is configured to wait on matchmaking results */
         public Integer PollWaitTimeMS;
-        /**
-         * IPV4 address of the server
-         * @deprecated Please use ServerIPV4Address instead.
-         */
-        @Deprecated
-        public String ServerHostname;
         /** IPV4 address of the server */
         public String ServerIPV4Address;
         /** IPV6 address of the server */
@@ -3277,12 +3265,6 @@ public class PlayFabClientModels {
         public String LobbyID;
         /** password required to log into the server */
         public String Password;
-        /**
-         * server IPV4 address
-         * @deprecated Please use ServerIPV4Address instead.
-         */
-        @Deprecated
-        public String ServerHostname;
         /** server IPV4 address */
         public String ServerIPV4Address;
         /** server IPV6 address */
